@@ -1,5 +1,7 @@
-#!/usr/bin/env python3
-
+#!/usr/bin/python3
+"""
+Module 3-add: adds 1 and 2 together
+"""
 from add_4 import add
 a = 1
 b = 2

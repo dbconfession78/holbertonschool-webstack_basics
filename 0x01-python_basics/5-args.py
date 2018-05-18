@@ -1,5 +1,7 @@
-#!/usr/bin/env python3
-
+#!/usr/bin/python3
+"""
+Module 5-args: prints arguments from input
+"""
 if __name__ == "__main__":
     from sys import argv
     count = len(argv)-1
