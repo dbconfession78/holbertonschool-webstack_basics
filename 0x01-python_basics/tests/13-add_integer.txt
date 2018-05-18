@@ -1,0 +1,77 @@
+Tests for ``add_integer`` module
+================================
+
+
+>>> add_integer = __import__("13-add_integer").add_integer
+
+Check for documentation
+	  # check for module documentation
+	  >>> mod_doc = __import__("13-add_integer").__doc__
+	  >>> print(len(mod_doc) > 1)
+	  True
+
+	  # check for function documentation
+	  >>> fnc_doc = add_integer.__doc__
+	  >>> print(len(fnc_doc) > 1)
+	  True
+
+Test Cases
+	 # both ints
+	 >>> add_integer(1, 1)
+	 2
+
+	 # a as int and b as float
+	 >>> add_integer(1, 1.0)
+	 2
+
+	 # a as float and b as int
+	 >>> add_integer(1.0, 1)
+	 2
+
+	 # both as float
+	 >>> add_integer(1.0, 1.0)
+	 2
+
+	 # with a negative number
+	 >>> add_integer(-1, 1.0)
+	 0
+
+	 # with a large pos int
+	 >>> add_integer(2147483648, 1.0)
+	 2147483649
+
+	 # with a large neg int
+	 >>> add_integer(-2147483648, -1.0)
+	 -2147483649
+
+
+Error Tests
+	 # a as int and  b as str
+	 >>> add_integer(1, "1")
+	 ...
+	 Traceback (most recent call last):
+	 TypeError: b must be an integer
+
+	 # a as str and  b as int
+	 >>> add_integer("1", 1)
+	 ...
+	 Traceback (most recent call last):
+	 TypeError: a must be an integer
+
+	 # a and b as str
+	 >>> add_integer("1", "1")
+	 ...
+	 Traceback (most recent call last):
+	 TypeError: a must be an integer
+
+	 # a as None
+	 >>> add_integer(None, 1)
+	 ...
+	 Traceback (most recent call last):
+	 TypeError: a must be an integer
+
+	 # a as a function
+	 >>> add_integer(fnc1(), 1)
+	 ...
+	 Traceback (most recent call last):
+	 NameError: name 'fnc1' is not defined
