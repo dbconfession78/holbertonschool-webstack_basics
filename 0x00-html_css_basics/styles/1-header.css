@@ -1,0 +1,23 @@
+header {
+	background-color: #FF0000;
+	height: 60px;
+	width: 100%;
+	padding-top: 10px;
+	text-align: center;
+}
+
+
+.container {
+	background-color: #00FF00;
+	height: 50px;
+	width: 1000px;
+	max-width: 1000px;
+	vertical-align: top;
+	display: inline-block;
+	padding: 0px;
+	position: relative;
+}
+
+.container UL {
+	list-style-type: none;
+}
