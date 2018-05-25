@@ -1,13 +1,14 @@
 #!/usr/bin/python3
-
+"""
+Module 5-args: prints arguments from input
+"""
 if __name__ == "__main__":
-    import sys
-    argc = len(sys.argv)
-    if argc == 1:
+    from sys import argv
+    count = len(argv)-1
+    if count == 0:
         print("0 arguments.")
-    elif argc == 2:
-        print("1 argument:\n1: {:s}".format(sys.argv[1]))
     else:
-        print("{:d} arguments:".format(argc-1))
-        for i in range(1, argc):
-            print("{:d}: {:s}".format(i, sys.argv[i]))
+        print("{} argument".format(count), end="s:\n" if count != 1 else ":\n")
+        for i in range(1, count+1):
+            arg = argv[i]
+            print("{:d}: {:s}".format(i, arg))
