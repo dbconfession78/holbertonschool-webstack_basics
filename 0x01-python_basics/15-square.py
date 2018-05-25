@@ -26,7 +26,10 @@ class Square:
         """
         retval = ""
         for i in range(self.__size):
-            retval += "{}\n".format("#" * self.__size)
+            s = ""
+            if i < self.__size-1:
+                s = "\n"
+            retval += "{}{}".format(("#" * self.__size), s)
         return retval
 
     @property
@@ -60,7 +63,4 @@ class Square:
         """"
         prints in stdout the squre with the character #
         """
-        if self.__size == 0:
-            print("")
-
         print(str(self))
