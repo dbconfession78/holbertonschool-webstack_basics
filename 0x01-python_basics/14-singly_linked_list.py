@@ -8,11 +8,11 @@ class Node:
     """
     Node: class deinfition for sll node
     """
-    def __init__(self, data, next_node=None):
+    def __init__(self, next_node=None):
         """
         initialization of Node class
         """
-        self.__data = data
+        self.__data = None
         self.__next_node = next_node
 
     @property
@@ -85,7 +85,8 @@ class SinglyLinkedList:
         inserts a node into a sorted sll
         :value: 'data' value of node being inserted
         """
-        new_node = Node(value)
+        new_node = Node()
+        new_node.data = value
         if self.__head is None:
             self.__head = new_node
         else:
