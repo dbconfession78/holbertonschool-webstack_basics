@@ -63,7 +63,6 @@ class SinglyLinkedList:
         """
         ___repr___ for SinglyLinkedList class
         """
-        print("there")
         return self
 
     def __str__(self):
@@ -80,6 +79,22 @@ class SinglyLinkedList:
                 retval += "\n"
             walk = walk.next_node
         return "{}".format(retval)
+
+    def sorted_insert_1(self, value):
+        """
+        inserts a node into a sorted sll
+        :value: 'data' value of node being inserted
+        """
+        if self.__head is None or self.__head.data >= value:
+            self.__head = Node(value)
+            self.__head.next_node = self.__head
+        else:
+            walk = self.__head
+            while walk.next_node and walk.next_node < value:
+                walk = walk.next_node
+            new_node = Node(value)
+            new_node.next_node = walk.next_node
+            walk.next_node = new_node
 
     def sorted_insert(self, value):
         """
