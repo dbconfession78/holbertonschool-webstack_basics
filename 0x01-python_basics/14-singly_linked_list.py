@@ -52,14 +52,12 @@ class SinglyLinkedList:
     """
     SinglyLinkeList: class definition for a singly linked list
     """
-    __head = None
 
     def __init__(self):
         """
         SinglyLinkedList class initialization
         """
-        pass
-#        self.__head = None
+        self.__head = None
 
     def __repr__(self):
         """
