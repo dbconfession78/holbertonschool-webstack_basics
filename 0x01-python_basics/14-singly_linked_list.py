@@ -27,6 +27,7 @@ class Node:
         """
         data: setter
         """
+#        if value.__class__ is not int:
         if type(value) != int:
             raise TypeError("data must be an integer")
         self.__data = value
@@ -63,15 +64,12 @@ class SinglyLinkedList:
         """
         ___repr___ for SinglyLinkedList class
         """
-        retval = ""
+        retval = []
         walk = self.__head
         while walk:
-            retval += "{}".format(str(walk.data))
-
-            if walk.next_node is not None:
-                retval += "\n"
+            retval.append(str(walk.data))
             walk = walk.next_node
-        return "{}".format(retval)
+        return "\n".join(retval)
 
     def sorted_insert(self, value):
         """
