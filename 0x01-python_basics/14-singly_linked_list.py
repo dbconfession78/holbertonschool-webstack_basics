@@ -27,8 +27,8 @@ class Node:
         """
         data: setter
         """
-#        if value.__class__ is not int:
-        if type(value) != int:
+        if value.__class__ is not int:
+            #        if type(value) != int:
             raise TypeError("data must be an integer")
         self.__data = value
 
@@ -44,7 +44,7 @@ class Node:
         """
         next_node: setter
         """
-        if type(value) not in {Node, None}:
+        if value is not None and type(value) is not Node:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
