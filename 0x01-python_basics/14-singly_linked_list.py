@@ -1,19 +1,19 @@
 #!/usr/bin/python3
 """
-Module 14-singly_linked_list
+Node and SinglyLinkedList class definitions
 """
 
 
 class Node:
     """
-    Node class deinfition for sll node
+    class deinfition for sll node
     """
     def __init__(self, data, next_node=None):
         """
         initialization of Node class
         """
-        self.__data = data
-        self.__next_node = next_node
+        self.data = data
+        self.next_node = next_node
 
     @property
     def data(self):
