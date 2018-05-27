@@ -28,7 +28,6 @@ class Node:
         data: setter
         """
         if value.__class__ is not int:
-            #        if type(value) != int:
             raise TypeError("data must be an integer")
         self.__data = value
 
@@ -44,9 +43,10 @@ class Node:
         """
         next_node: setter
         """
-        if value is not None and type(value) is not Node:
+        if value is None or type(value) is Node:
+            self.__next_node = value
+        else:
             raise TypeError("next_node must be a Node object")
-        self.__next_node = value
 
 
 class SinglyLinkedList:
