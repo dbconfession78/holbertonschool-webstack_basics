@@ -85,37 +85,11 @@ class SinglyLinkedList:
         inserts a node into a sorted sll
         :value: 'data' value of node being inserted
         """
-        new_node = Node(value)
-        if self.__head is None:
-            self.__head = new_node
-
-        elif self.__head and self.__head.data >= value:
-            new_node.next_node = self.__head
-            self.__head = new_node
+        if self.__head is None or self.__head.data >= value:
+            self.__head = Node(value, next_node=self.__head)
         else:
             walk = self.__head
-            prev = None
-            while walk:
-                if walk.data >= value:
-                    if prev:
-                        prev.next_node = new_node
-                    else:
-                        self.__head = new_node
-                    new_node.next_node = walk
-                    break
-                if prev is None and walk.data >= value:
-                    self.head = new_node
-                    new_node.next_node = walk
-                    break
-                prev = walk
-                if walk.next_node:
-                    if walk.next_node.data >= value:
-                        new_node.next_node = walk.next_node
-                        walk.next_node = new_node
-                        break
-                    else:
-                        walk = walk.next_node
-                else:
-                    walk.next_node = new_node
-                    break
+            while walk.next_node and walk.next_node.data < value:
                 walk = walk.next_node
+            new_node = Node(value, next_node=walk.next_node)
+            walk.next_node = new_node
