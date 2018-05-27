@@ -63,13 +63,6 @@ class SinglyLinkedList:
         """
         ___repr___ for SinglyLinkedList class
         """
-        return self
-
-    def __str__(self):
-        """
-        ___str___ for SinglyLinkedList class
-        """
-
         retval = ""
         walk = self.__head
         while walk:
