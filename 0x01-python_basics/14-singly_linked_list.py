@@ -6,7 +6,7 @@ Module 14-singly_linked_list
 
 class Node:
     """
-    Node: class deinfition for sll node
+    Node class deinfition for sll node
     """
     def __init__(self, data, next_node=None):
         """
@@ -18,14 +18,14 @@ class Node:
     @property
     def data(self):
         """
-        data: getter
+        data getter
         """
         return self.__data
 
     @data.setter
     def data(self, value):
         """
-        data: setter
+        data setter
         """
         if value.__class__ is not int:
             raise TypeError("data must be an integer")
@@ -34,14 +34,14 @@ class Node:
     @property
     def next_node(self):
         """
-        next_node: getter
+        next_node getter
         """
         return self.__next_node
 
     @next_node.setter
     def next_node(self, value):
         """
-        next_node: setter
+        next_node setter
         """
         if value is None or type(value) is Node:
             self.__next_node = value
@@ -51,7 +51,7 @@ class Node:
 
 class SinglyLinkedList:
     """
-    SinglyLinkeList: class definition for a singly linked list
+    SinglyLinkeList class definition for a singly linked list
     """
 
     def __init__(self):
@@ -74,7 +74,7 @@ class SinglyLinkedList:
     def sorted_insert(self, value):
         """
         inserts a node into a sorted sll
-        :value: 'data' value of node being inserted
+        value 'data' value of node being inserted
         """
         if self.__head is None or self.__head.data >= value:
             self.__head = Node(value, next_node=self.__head)
