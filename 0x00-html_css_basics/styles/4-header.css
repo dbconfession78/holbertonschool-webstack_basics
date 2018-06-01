@@ -1,0 +1,107 @@
+header {
+	background-color: #FF0000;
+	height: 60px;
+	width: 100%;
+	padding-top: 10px;
+	text-align: center;
+}
+
+.container {
+	position: relative;
+	bottom: 25%;
+	background-color: #00FF00;
+	height: 50px;
+	width: 1000px;
+	display: inline-block;
+	max-width: 1000px;
+	list-style-type: none;
+	padding: 0px;
+	text-align: left;
+}
+
+.container li.logo {
+	position: relative;
+	background-color: #0000FF;
+	height: 100%;
+	width: 120px;
+	float: left;
+}
+
+.container li.logo a {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.container li.search {
+	position: absolute;
+	display: inline-flex;
+	background-color: #550000;
+	height: 40px;
+	left: 140px;
+	right: 220px;
+	margin: 5px 0 5px 0;
+}
+
+.container li.user {
+	background-color: #005500;
+	height: 100%;
+	width: 200px;
+	float: right;
+}
+
+.container li.search div.find {
+	display: inline-flex;
+	background-color: #005555;
+	height: 100%;
+	width: 45%;
+}
+
+.container li.search div.location {
+	display: inline-flex;
+	background-color: #009999;
+	height: 100%;
+	width: 45%;
+}
+
+.container li.search div.action {
+	background-color: #119911;
+	height: 100%;
+	width: 10%;
+}
+
+.container li.search div.find label:before {
+	content: "Find";
+	padding: 0 10px;
+	font-weight: 600;
+	font-size: 16px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 40px;
+}
+
+#search_find { 
+	padding: 0 10px 0 10px;
+	border: 0px;
+	width: 100%;
+	font-size: 14px;
+}
+
+.container li.search div.location label:before {
+	display: inline-flex;
+	content: "Near";
+	padding: 0 10px 0 10px;
+	font-weight: 600;
+	font-size: 16px;
+	text-align: center;
+	vertical-align: middle;
+	line-height:40px;
+}
+
+#search_location {
+	display: inline-flex;
+	padding: 0 10px 0 10px;
+	border: 0px;
+	font-size: 14px;
+	width: 100%;
+}
