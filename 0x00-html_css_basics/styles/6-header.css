@@ -1,0 +1,134 @@
+header {
+	background-color: #D32323;
+	height: 60px;
+	width: 100%;
+	padding-top: 10px;
+	text-align: center;
+}
+
+.container {
+	position: relative;
+	bottom: 25%;
+	height: 50px;
+	width: 1000px;
+	display: inline-block;
+	max-width: 1000px;
+	list-style-type: none;
+	padding: 0px;
+	text-align: left;
+
+	/* new */
+	border-radius: 4px;
+
+	/* changed */
+	background-color: #FFFFFF;
+	overflow: hidden;
+}
+
+.container li.logo {
+	position: relative;
+	background-color: #0000FF;
+	height: 100%;
+	width: 120px;
+	float: left;
+	background-image: url("../images/logo.jpg");
+	background-size: 100%;
+}
+
+.container li.logo a {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.container li.search {
+	position: absolute;
+	display: inline-flex;
+	background-color: #FEFEFE;
+	height: 40px;
+	left: 140px;
+	right: 220px;
+	margin: 5px 0 5px 0;
+	border: 1px solid #CCCCCC;
+	border-radius: 4px;
+}
+
+.container li.user {
+	height: 100%;
+	width: 200px;
+	float: right;
+}
+
+
+.container li.search div.find {
+	display: inline-flex;
+
+	height: 100%;
+	width: 45%;
+	
+}
+
+.container li.search div.location {
+	display: inline-flex;
+	height: 100%;
+	width: 45%;
+}
+
+.container li.search div.action {
+	height: 100%;
+	width: 10%;
+}
+
+.container li.search div.find label:before {
+	content: "Find";
+	padding: 0 10px;
+	font-weight: 600;
+	font-size: 16px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 40px;
+}
+
+#search_find { 
+	padding: 0 10px 0 10px;
+	border: 0px;
+	width: 100%;
+	font-size: 14px;
+}
+
+.container li.search div.location label:before {
+	display: inline-flex;
+	content: "Near";
+	padding: 0 10px 0 10px;
+	font-weight: 600;
+	font-size: 16px;
+	text-align: center;
+	vertical-align: middle;
+	line-height:40px;
+	border-left: 1px solid #CCCCCC;
+}
+
+#search_location {
+	display: inline-flex;
+	padding: 0 10px 0 10px;
+	border: 0px;
+	font-size: 14px;
+	width: 100%;
+}
+
+.container li.search div.action button#search_submit {
+	position: relative;
+	background-color: #D32323;
+	width: 100%;
+	height: 100%;
+	border-radius: 4px;
+	
+}
+
+.fa-search {
+	position: absolute;
+	bottom: 6px;
+	left: 20px;
+	color: white;
+	font-size: 2.0em;
+}
