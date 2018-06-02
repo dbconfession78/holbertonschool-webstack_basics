@@ -1,0 +1,9 @@
+article {
+	display: inline-block;
+	width: 300px;
+	position: relative;
+	min-height: 110px;
+	margin: 10px;
+	border: 1px solid #CCCCCC;
+	border-radius: 10px;
+}
