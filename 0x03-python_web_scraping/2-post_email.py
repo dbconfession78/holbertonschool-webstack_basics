@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module 1-hbtn_header
+Module 2-post_email
 """
 import requests
 from sys import argv
