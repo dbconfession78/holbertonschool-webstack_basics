@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module 1-hbtn_header
+Module 3-error_code
 """
 import requests
 from sys import argv
