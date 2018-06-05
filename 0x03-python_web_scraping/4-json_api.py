@@ -2,11 +2,12 @@
 """
 Module 4-json_api
 """
-import requests
-from sys import argv
 
 
 def main():
+    import requests
+    from sys import argv
+
     url = "http://0.0.0.0:5000/search_user"
     letter = ""
     if len(argv) >= 2:
