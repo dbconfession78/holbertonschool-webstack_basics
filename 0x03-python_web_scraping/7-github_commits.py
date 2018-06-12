@@ -20,7 +20,11 @@ def main():
     if j == []:
         print("No result")
     else:
-        for i in range(10):
+        if len(j) >= 10:
+            limit = 10
+        else:
+            limit = len(j)
+        for i in range(limit):
             elem = j[i]
             sha = elem.get('sha')
             author = elem.get('commit').get('author').get('name')
