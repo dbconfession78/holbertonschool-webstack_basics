@@ -19,11 +19,11 @@ def main():
         results = j.get('results')
         for result in results:
             retval.append(result.get("name"))
-            url = j.get("next")
+        url = j.get("next")
+
     print("Number of results: {}".format(j.get("count")))
     for elem in retval:
         print(elem)
-
 
 if __name__ == "__main__":
     main()
