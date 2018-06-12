@@ -12,27 +12,17 @@ def main():
 
     name = argv[1]
     url = "http://swapi.co/api/people/?search={}".format(name)
-    r = requests.get(url)
-    j = r.json()
     retval = []
-    if type(j) is dict:
-        if j == {}:
-            print("No result")
-        else:
-            print("Number of results: {}".format(j.get("count")))
-            while j.get('results'):
-                results = j.get('results')
-                for result in results:
-                    retval.append(result.get("name"))
-                if j.get("next"):
-                    r = requests.get(j["next"])
-                    j = r.json()
-                else:
-                    j = {}
-            for elem in retval:
-                print(elem)
-    else:
-        print("Not a valid JSON")
+    while url:
+        r = requests.get(url)
+        j = r.json()
+        results = j.get('results')
+        for result in results:
+            retval.append(result.get("name"))
+            url = j.get("next")
+    print("Number of results: {}".format(j.get("count")))
+    for elem in retval:
+        print(elem)
 
 
 if __name__ == "__main__":
