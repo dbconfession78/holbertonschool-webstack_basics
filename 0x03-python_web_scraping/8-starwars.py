@@ -19,7 +19,7 @@ def main():
         if j == {}:
             print("No result")
         else:
-            print("Number of result: {}".format(j.get("count")))
+            print("Number of results: {}".format(j.get("count")))
             while j.get('results'):
                 results = j.get('results')
                 for result in results:
