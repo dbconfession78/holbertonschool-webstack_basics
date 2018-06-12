@@ -1,29 +1,31 @@
 #!/usr/bin/python3
 """
-Module 8-starwars -  takes in a string and sends a search
-                     request to the Star Wars API 'people' endpoint
-                     (https://swapi.co/documentation)
+takes in a string and sends a search request to the Star Wars API
 """
 
 
 def main():
+    """ Entry point """
     import requests
     from sys import argv
 
-    name = argv[1]
-    url = "http://swapi.co/api/people/?search={}".format(name)
-    retval = []
-    while url:
-        r = requests.get(url)
-        j = r.json()
-        results = j.get('results')
+    query = argv[1]
+    next = 'https://swapi.co/api/people/?search={}'.format(query)
+    names = []
+    while (next):
+        json = requests.get(next).json()
+        results = json.get('results')
         for result in results:
-            retval.append(result.get("name"))
-        url = j.get("next")
+            names.append(result['name'])
 
-    print("Number of results: {}".format(j.get("count")))
-    for elem in retval:
-        print(elem)
+        try:
+            next = json['next']
+        except:
+            next = None
 
-if __name__ == "__main__":
+    print('Number of results: {}'.format(json.get('count')))
+    for name in names:
+        print(name)
+
+if __name__ == '__main__':
     main()
