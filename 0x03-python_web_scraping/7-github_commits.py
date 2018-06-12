@@ -24,7 +24,7 @@ def main():
             elem = j[i]
             sha = elem.get('sha')
             author = elem.get('commit').get('author').get('name')
-            item = "{} {}".format(sha, author)
+            item = "{}: {}".format(sha, author)
             print(item)
 
 if __name__ == "__main__":
