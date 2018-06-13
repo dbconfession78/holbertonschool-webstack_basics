@@ -1,6 +1,5 @@
 #!/usr/bin/node
 const dict = require('./101-data.js').dict;
-console.log(dict);
 let d = {};
 const keys = Object.keys(dict);
 for (let i = 0; i < keys.length; i++) {
