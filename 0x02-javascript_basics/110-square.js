@@ -1,12 +1,6 @@
 #!/usr/bin/node
-const Rectangle = require('./107-rectangle').Rectangle;
-function Square (size) {
-  Rectangle.call(this, size);
-  if (size > 0) {
-    this.width = size;
-    this.height = size;
-  }
-}
+const Square = require('./109-square').Square;
+
 Square.prototype.charPrint = function (c) {
   if (c === undefined) {
     c = 'X';
