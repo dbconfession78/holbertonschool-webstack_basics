@@ -1,7 +1,11 @@
 #!/usr/bin/node
 const Rectangle = require('./107-rectangle').Rectangle;
-exports.Square = function Square (size) {
+function Square (size) {
   Rectangle.call(this);
-  this.width = size;
-  this.height = size;
-};
+  if (size > 0) {
+    this.width = size;
+    this.height = size;
+  }
+}
+
+module.exports.Square = Square;
