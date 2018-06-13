@@ -2,7 +2,9 @@
 const list = require('./100-data.js').list;
 console.log(list);
 let n = [];
-for (let i = 0; i < list.length; i++) {
-  n.push(list[i] * i);
-}
+let i = 0;
+list.map(elem => {
+  n.push(elem * i);
+  i++;
+});
 console.log(n);
