@@ -2,10 +2,8 @@
 const Rectangle = require('./107-rectangle').Rectangle;
 function Square (size) {
   Rectangle.call(this);
-  if (size > 0) {
-    this.width = size;
-    this.height = size;
-  }
+  this.width = size;
+  this.height = size;
 }
 
 module.exports.Square = Square;
