@@ -23,7 +23,7 @@ def main():
         except:
             next = None
 
-    print('Number of result: {}'.format(json.get('count')))
+    print('Number of results: {}'.format(json.get('count')))
     for name in names:
         print(name)
 
